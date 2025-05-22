@@ -40,6 +40,14 @@ app.use(
   })
 );
 
+// Serve frontend static files
+app.use(express.static(path.join(__dirname, "../client/dist")));
+
+// For any route, serve index.html (SPA fallback)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+});
+
 // 🛠 Middleware for handling JSON requests and cookies
 app.use(express.json()); // Enables parsing of JSON request bodies
 app.use(cookieParser()); // Enables reading cookies in HTTP requests
