@@ -1,7 +1,0 @@
-redirects:
-  - source: /api/*
-    target: https://your-backend-service-name.onrender.com/api/:splat
-    status: 200
-  - source: /*
-    target: /index.html
-    status: 200
