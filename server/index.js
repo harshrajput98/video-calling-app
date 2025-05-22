@@ -8,6 +8,8 @@ import { Server } from "socket.io"; // Import `Server` from `socket.io` for real
 import dbConnection from "./db/dbConnect.js"; // Connect to MongoDB
 import authRoute from "./routes/authRoute.js"; // Import authentication routes
 import userRoute from "./routes/userRoute.js"; // Import user-related routes
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
@@ -39,7 +41,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"], // ✅ Allow these HTTP methods
   })
 );
-
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
