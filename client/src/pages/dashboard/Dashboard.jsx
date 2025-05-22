@@ -314,8 +314,8 @@ const Dashboard = () => {
     setCallAccepted(false); // ✅ Ensure call is not mistakenly marked as ongoing
     setSelectedUser(null); // ✅ Reset the selected user
     setTimeout(() => {
-      window.location.reload(); // ✅ Force reset if cleanup fails
-    }, 100);
+  navigate('/dashboard');
+}, 100);
   };
 
   // 🎤 Toggle Microphone
