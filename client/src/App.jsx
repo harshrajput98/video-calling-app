@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AuthForm from './pages/Auth/Auth';
+import AuthForm from './pages/auth/Auth';
 import Dashboard from './pages/Dashboard/Dashboard';
-import IsLogin from './pages/Auth/IsLogin';
+import IsLogin from './pages/auth/IsLogin';
 import LandingPage from './pages/LandingPage/LandingPage';
 
 function App() {
