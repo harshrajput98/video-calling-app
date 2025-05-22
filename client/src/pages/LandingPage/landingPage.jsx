@@ -88,7 +88,7 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="bg-blue-900 py-6 mt-auto text-center text-blue-300 text-sm">
-        &copy; {new Date().getFullYear()} SlrTechCalls. All rights reserved.
+        &copy; {new Date().getFullYear()} WeMeet . All rights reserved. Created by harsh
       </footer>
     </div>
   );
