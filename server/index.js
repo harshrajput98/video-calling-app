@@ -28,6 +28,7 @@ console.log(allowedOrigins); // Debugging: Check if the frontend URL is loaded p
 app.use(
   cors({
     origin: function (origin, callback) {
+       console.log('Origin received:', origin);
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true); // ✅ Allow the request if it's from an allowed origin
       } else {
